@@ -1,7 +1,8 @@
 #include <Manager/GameManager.h>
+#include <SFML/Graphics.hpp>
 #include <iostream>
 
-namespace CMake_OpenGL
+namespace baba_is_GUI
 {
     GameManager* GameManager::GetInstance()
     {
@@ -78,9 +79,10 @@ namespace CMake_OpenGL
         m_window->draw(m_backgroundSprite);
     }
 
-    void GameManager::DrawSprite(sf::Sprite spr)
+    void GameManager::DrawSprite(const GameObject* object)
     {
-        m_window->draw(spr);
+        if(object->GetActive())
+            m_window->draw(object->GetSprite());
     }
 
     int GameManager::GetWindowWidth() const
@@ -92,5 +94,9 @@ namespace CMake_OpenGL
     {
         return m_windowHeight;
     }
-
+    sf::Vector2i GameManager::GetMousePosition() const
+    {
+        sf::Vector2i mousePos = sf::Mouse::getPosition(*m_window);
+        return mousePos;
+    }
 }

@@ -4,15 +4,15 @@
 // personal capacity and are not conveying any rights to any intellectual
 // property of any third parties.
 
-#ifndef HEARTHSTONEPP_GUI_IMGUI_UTILS_H
-#define HEARTHSTONEPP_GUI_IMGUI_UTILS_H
+#ifndef BABA_IS_GUI_IMGUI_UTILS_H
+#define BABA_IS_GUI_IMGUI_UTILS_H
 
 #include <Manager/GameManager.h>
 #include <Manager/SceneManager.h>
 
 #include <imgui/imgui.h>
 
-namespace CMake_OpenGL
+namespace baba_is_GUI
 {
 inline void SetAlignmentHorizontalCenter(const char* text, bool isButton)
 {

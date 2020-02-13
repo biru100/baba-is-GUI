@@ -8,8 +8,9 @@
 #include <SFML/Window/VideoMode.hpp>
 
 #include <cmath>
+#include <iostream>
 
-namespace CMake_OpenGL
+namespace baba_is_GUI
 {
     SceneManager* SceneManager::GetInstance()
     {
@@ -135,9 +136,9 @@ namespace CMake_OpenGL
                 ImGui::MenuItem(fps);
                 ImGui::EndMainMenuBar();
             }
-
             // Draw
             GameManager::GetInstance()->Draw();
+            m_actualScene->Render();
             ImGui::SFML::Render(*m_window);
             m_window->display();
             m_window->resetGLStates();

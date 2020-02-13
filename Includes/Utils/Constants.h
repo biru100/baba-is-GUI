@@ -4,10 +4,10 @@
 // personal capacity and are not conveying any rights to any intellectual
 // property of any third parties.
 
-#ifndef HEARTHSTONEPP_GUI_CONSTANTS_H
-#define HEARTHSTONEPP_GUI_CONSTANTS_H
+#ifndef BABA_IS_GUI_CONSTANTS_H
+#define BABA_IS_GUI_CONSTANTS_H
 
-namespace Hearthstonepp
+namespace baba_is_GUI
 {
 constexpr float FONT_RATIO_STD_RES = 2048.0f;
 }

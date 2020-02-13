@@ -1,9 +1,14 @@
-#ifndef CMAKE_IMGUI_TEST_SCENE_H
-#define CMAKE_IMGUI_TEST_SCENE_H
+#ifndef BABA_IS_GUI_TEST_SCENE_H
+#define BABA_IS_GUI_TEST_SCENE_H
 
 #include <Scenes/Scene.h>
 #include <SFML/Graphics.hpp>
-namespace CMake_OpenGL
+#include <Manager/GameObject.hpp>
+
+#define MAX_OBJECT 10
+#define MAP_WIDTH 10
+#define MAP_HEIGHT 10
+namespace baba_is_GUI
 {
 	class TestScene : public Scene
 	{
@@ -17,7 +22,11 @@ namespace CMake_OpenGL
 
 		void Update() override;
 
+		void Render() override;
+
 		void Finish() override;
+
+		void Brush();
 
 	private:
 		bool IsValidLoginInfo() const;
@@ -33,8 +42,10 @@ namespace CMake_OpenGL
 		float m_width = 0.0f;
 		float m_height = 0.0f;
 	private:
-		sf::Texture objectTexture;
-		sf::Sprite object;
+		GameObject** object;
+		int objectcnt = 0;
+		int v[2];
+		bool objectchk[MAP_WIDTH][MAP_HEIGHT];
 	};
 }
 

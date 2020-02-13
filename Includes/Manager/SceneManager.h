@@ -1,5 +1,5 @@
-#ifndef HEARTHSTONEPP_GUI_SCENE_MANAGER_H
-#define HEARTHSTONEPP_GUI_SCENE_MANAGER_H
+#ifndef BABA_IS_GUI_SCENE_MANAGER_H
+#define BABA_IS_GUI_SCENE_MANAGER_H
 
 #include <Scenes/Scene.h>
 
@@ -8,7 +8,7 @@
 #include <string>
 #include <vector>
 
-namespace CMake_OpenGL
+namespace baba_is_GUI
 {
     class SceneManager
     {

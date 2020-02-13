@@ -1,12 +1,15 @@
-#ifndef CMAKE_IMGUI_GAME_MANAGER_H
-#define CMAKE_IMGUI_GAME_MANAGER_H
+#ifndef BABA_IS_GUI_GAME_MANAGER_H
+#define BABA_IS_GUI_GAME_MANAGER_H
 
 
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Texture.hpp>
+#include <SFML/System/Vector2.hpp>
+#include <SFML/Window/Mouse.hpp>
+#include <Manager/GameObject.hpp>
 
-namespace CMake_OpenGL
+namespace baba_is_GUI
 {
     class GameManager
     {
@@ -43,13 +46,15 @@ namespace CMake_OpenGL
         //! Draw everything.
         void Draw();
 
-        void DrawSprite(sf::Sprite spr);
+        void DrawSprite(const GameObject* object);
 
         //! Returns the width of the window.
         int GetWindowWidth() const;
 
         //! Returns the height of the window.
         int GetWindowHeight() const;
+
+        sf::Vector2i GetMousePosition() const;
 
     private:
         GameManager() = default;
@@ -60,6 +65,8 @@ namespace CMake_OpenGL
 
         sf::Texture m_backgroundTexture;
         sf::Sprite m_backgroundSprite;
+
+        GameObject* testObject;
 
         int m_windowWidth;
         int m_windowHeight;

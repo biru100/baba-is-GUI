@@ -35,7 +35,11 @@ elseif (CMAKE_SYSTEM_NAME MATCHES "Darwin")
     set(SFML_OPENAL_DEPENDENCIES ${OPENAL_LIBRARY})
 endif()
 link_directories(${SFML_LIBRARIES_PATH})
-set(SFML_LIBRARY_DEPENDENCIES sfml-audio sfml-graphics sfml-network sfml-system sfml-window)
+if(0)
+    set(SFML_LIBRARY_DEPENDENCIES sfml-audio sfml-graphics sfml-network sfml-system sfml-window)
+else()
+    set(SFML_LIBRARY_DEPENDENCIES sfml-audio-d sfml-graphics-d sfml-network-d sfml-system-d sfml-window-d)
+endif()
 
 # Includes
 include_directories(
